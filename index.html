@@ -152,7 +152,46 @@
         <div class="container">
             <h2>Contacto</h2>
             <p class="section-description">Ponte en contacto con nosotros para más información</p>
-        
+        <script>
+        // Función para el menú hamburguesa
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+            
+            // Alternar menú al hacer clic en el ícono hamburguesa
+            hamburger.addEventListener('click', function() {
+                hamburger.classList.toggle('active');
+                navLinks.classList.toggle('active');
+            });
+            
+            // Cerrar menú al hacer clic en un enlace
+            const navItems = document.querySelectorAll('.nav-links a');
+            navItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    hamburger.classList.remove('active');
+                    navLinks.classList.remove('active');
+                });
+            });
+            
+            // Cerrar menú al hacer clic fuera de él
+            document.addEventListener('click', function(event) {
+                const isClickInsideNav = navLinks.contains(event.target) || hamburger.contains(event.target);
+                
+                if (!isClickInsideNav && navLinks.classList.contains('active')) {
+                    hamburger.classList.remove('active');
+                    navLinks.classList.remove('active');
+                }
+            });
+            
+            // Cerrar menú al redimensionar la ventana (si se vuelve a pantalla grande)
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768) {
+                    hamburger.classList.remove('active');
+                    navLinks.classList.remove('active');
+                }
+            });
+        });
+        </script>
                 <div class="contact-map">
                     <iframe
                     src="https://www.google.com/maps?q=pedraza+Venezuela&output=embed"></iframe>
@@ -239,4 +278,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
