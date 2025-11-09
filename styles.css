@@ -302,6 +302,7 @@ header .container {
 
 .about-text {
     flex: 1;
+    color: black;
 }
 
 .about-text ul {
@@ -765,4 +766,5 @@ footer {
         top: -2.5rem;
         
     }
+
 }
