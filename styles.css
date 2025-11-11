@@ -772,7 +772,7 @@ footer {
         height: 50px;
     }
     .botton-flotante a{
-        font-size: 10px;
+        font-size: 1.5rem;
     }
     
     .hero-image,
@@ -919,4 +919,5 @@ footer {
         
     }
 }
+
 
