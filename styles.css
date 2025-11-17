@@ -330,6 +330,7 @@ header .container {
     text-align: left;
     margin-bottom: 20px;
     color: var(--white);
+    
 }
 
 .hero-content h2::after {
@@ -344,7 +345,8 @@ header .container {
 .hero-content a{
     box-shadow: 2px 2px 3px rgb(255, 255, 255);
     backdrop-filter: blur(10px);
-    color: black;
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px 3px black;
 }
 .hero-image {
     flex: 1;
@@ -432,7 +434,9 @@ header .container {
     backdrop-filter: blur(10px);
     border-radius: 15px;
     text-shadow: 2px 2px 3px black;
-    border: 1px solid white;
+    border: 1px solid rgb(255, 255, 255);
+    box-shadow: 1px 2px 3px black;
+    transition: all 0.5s ease;
 }
 .container h2:hover{
     animation: movimiento9 0.2s forwards;
@@ -464,12 +468,14 @@ header .container {
     text-align: center;
     box-shadow: var(--shadow);
     transition: var(--transition);
-    box-shadow: 2px 2px 3px black;
+    background: linear-gradient( to bottom, var(--white),rgb(192, 191, 191));
+    box-shadow: 0 10px 6px black;
 }
 .product-image img{
     width: 100%;
     height: 100%;
     border-radius: 50%;
+    transition: all 0.5s ease;
 }
 .product-image img:hover{
     border-radius: 10px;
@@ -512,6 +518,11 @@ header .container {
     white-space: nowrap;
     text-shadow: 2px 2px 4px black;
     
+}
+.product-card p{
+    background-color: transparent;
+    border:1px solid rgb(47, 0, 255);
+    border-radius: 15px;
 }
 .products a{
     align-items: center;
@@ -621,6 +632,7 @@ footer {
  width: 70%;
  height: 70%;
  border-radius: 50%;
+ transition: all 0.5s ease;
 
 }
 .logo-footer img:hover{
@@ -690,7 +702,7 @@ footer {
     border-radius: 20px;
     background-color: rgba(6, 143, 47, 0.842);
     color: var(--white);
-    transition: var(--transition);
+    transition: all 0.4s ease;
     text-decoration: none;
     animation: movimiento 2s ease-in-out alternate infinite;
 }
@@ -704,7 +716,7 @@ footer {
 
 
 .social-links a:hover {
-    background-color: var(--primary-color);
+    background-color: red;
     transform: translateY(-5px);
 }
 
@@ -719,6 +731,11 @@ footer {
     color: #fff;
     font-size: 1rem;
     text-align: center;
+    background-color: transparent;
+    border: 1px solid wheat;
+    padding: 5px 5px ;
+    border-radius: 15px;
+    transition: all 0.4s ease;
 }
 .fade-in {
     opacity: 0;
@@ -768,8 +785,8 @@ footer {
         text-align: center;
     }
     .botton-flotante{
-        width: 50px;
-        height: 50px;
+        width: 30px;
+        height: 30px;
     }
     .botton-flotante a{
         font-size: 1.5rem;
@@ -919,5 +936,3 @@ footer {
         
     }
 }
-
-
