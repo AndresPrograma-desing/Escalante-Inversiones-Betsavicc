@@ -475,7 +475,7 @@ header .container {
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    transition: all 0.5s ease;
+    transition: all 0.75s ease;
 }
 .product-image img:hover{
     border-radius: 10px;
@@ -936,3 +936,4 @@ footer {
         
     }
 }
+
